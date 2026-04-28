@@ -1,0 +1,480 @@
+/* ═══════════════════════════════════════════════════════════════
+   Theme System — Light & Dark CSS Custom Properties
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── App Shell (outer background) ── */
+  --app-shell-bg: #2c3e50;
+  --app-container-padding: 8px;
+  --app-container-radius: 18px;
+
+  /* ── Card ── */
+  --card-bg: #ffffff;
+  --card-radius: 10px;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --card-border: #e5e7eb;
+
+  /* ── Base Colors ── */
+  --bg-primary: #f5f6f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #fafafa;
+  --bg-quaternary: #e8ecf1;
+
+  /* ── Text Colors ── */
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-tertiary: #666666;
+  --text-muted: #888888;
+  --text-dim: #999999;
+  --text-placeholder: #bbbbbb;
+
+  /* ── Border Colors ── */
+  --border-primary: #dddddd;
+  --border-secondary: #eeeeee;
+  --border-strong: #cccccc;
+  --border-heavy: #c0c0c0;
+  --border-light: #e0e0e0;
+
+  /* ── Surface (overlays, modals) ── */
+  --surface-overlay: #ffffff;
+  --surface-overlay-header: rgba(0, 0, 0, 0.03);
+  --surface-overlay-card: #f5f6f8;
+  --surface-overlay-border: #e5e7eb;
+  --surface-overlay-input-bg: #f0f2f5;
+  --surface-overlay-input-border: #d0d5dd;
+  --surface-overlay-text: #333333;
+  --surface-overlay-text-muted: #888888;
+
+  /* ── Header (light card style) ── */
+  --header-bg: #ffffff;
+  --header-text: #2c3e50;
+  --header-text-muted: #888888;
+  --header-separator: #e0e0e0;
+  --header-btn-bg: #f0f2f5;
+  --header-btn-border: #d0d5dd;
+  --header-btn-hover: #e4e7ec;
+  --header-btn-text: #444444;
+  --header-badge-bg: #eef0f4;
+  --header-search-bg: #ffffff;
+  --header-search-border: #e0e4ea;
+  --header-search-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.08);
+  --header-search-shadow-focus: 0 4px 16px rgba(93, 173, 226, 0.12), 0 0 0 2px rgba(93, 173, 226, 0.2);
+  --header-group-bg: rgba(0, 0, 0, 0.03);
+  --header-group-border: rgba(0, 0, 0, 0.04);
+  --header-icon-hover: rgba(0, 0, 0, 0.06);
+
+  /* ── Accents ── */
+  --accent-primary: #5dade2;
+  --accent-primary-hover: rgba(93, 173, 226, 0.15);
+  --accent-success: #27ae60;
+  --accent-success-hover: #219a52;
+  --accent-danger: #e74c3c;
+  --accent-danger-hover: #c0392b;
+  --accent-danger-subtle: rgba(231, 76, 60, 0.08);
+  --accent-warning: #f39c12;
+  --accent-ios-green: #34c759;
+
+  /* ── Toggle ── */
+  --toggle-off-bg: #d0d5dd;
+  --toggle-on-bg: var(--accent-ios-green);
+  --toggle-knob: #ffffff;
+
+  /* ── Segmented Control ── */
+  --segmented-bg: #e8ecf1;
+  --segmented-text: #888888;
+  --segmented-active-bg: #ffffff;
+  --segmented-active-text: #333333;
+
+  /* ── Status Badges ── */
+  --status-working-bg: #dcfce7;
+  --status-working-text: #166534;
+  --status-waiting-bg: #fef3c7;
+  --status-waiting-text: #92400e;
+  --status-idle-bg: #f3f4f6;
+  --status-idle-text: #9ca3af;
+
+  /* ── Component: Lane ── */
+  --lane-bg: #ffffff;
+  --lane-bg-alt: #fafafa;
+  --lane-label-bg: #ffffff;
+  --lane-label-bg-alt: #fafafa;
+  --lane-label-border: #e0e0e0;
+  --lane-label-text: #444444;
+  --lane-border: #eeeeee;
+  --lane-stripe: rgba(0, 0, 0, 0.012);
+
+  /* ── Component: Heatmap Overview ── */
+  --heatmap-row-highlight: rgba(93, 173, 226, 0.15);
+
+  /* ── Component: Track ── */
+  --track-header-bg: #e8ecf1;
+  --track-header-border: #cccccc;
+  --track-title-text: #2c3e50;
+  --track-stats-text: #666666;
+  --track-separator: #c0c0c0;
+  --track-remove-text: #c0392b;
+  --track-remove-hover-bg: #fdecea;
+  --track-remove-border: #cccccc;
+  --track-remove-bg: #ffffff;
+
+  /* ── Component: Axis ── */
+  --axis-bg: #fafafa;
+  --axis-border: #dddddd;
+  --axis-label-text: #888888;
+  --axis-tick-text: #999999;
+
+  /* ── Component: Queue ── */
+  --queue-bg: #ffffff;
+  --queue-header-bg: #fafafa;
+  --queue-border: #dddddd;
+  --queue-bar-bg: #f3f4f6;
+  --queue-pct-text: #666666;
+  --queue-empty-text: #bbbbbb;
+  --queue-label-text: #999999;
+
+  /* ── Component: Playback ── */
+  --playback-bg: #ffffff;
+  --playback-border: #dddddd;
+  --playback-btn-bg: #ffffff;
+  --playback-btn-border: #cccccc;
+  --playback-btn-hover: #f0f0f0;
+  --playback-btn-text: inherit;
+  --playback-time-text: #555555;
+  --playback-select-border: #cccccc;
+
+  /* ── Component: Legend ── */
+  --legend-bg: #ffffff;
+  --legend-border: #eeeeee;
+  --legend-item-hover: #f0f0f0;
+  --legend-swatch-border: rgba(0, 0, 0, 0.15);
+  --legend-off-text: #bbbbbb;
+  --legend-sep-text: #666666;
+  --legend-assign-text: #555555;
+
+  /* ── Component: Task Block ── */
+  --task-border: rgba(0, 0, 0, 0.15);
+  --task-collab-border: #333333;
+  --task-shadow-hover: rgba(0, 0, 0, 0.3);
+  --wait-pattern-color: rgba(0, 0, 0, 0.05);
+  --wait-border: rgba(0, 0, 0, 0.12);
+
+  /* ── Component: Playhead ── */
+  --playhead-color: #e74c3c;
+  --hoverhead-color: rgba(0, 0, 0, 0.25);
+
+  /* ── Component: Annotations ── */
+  --annotation-warning: #f39c12;
+  --annotation-primary: #5dade2;
+  --annotation-danger: #e74c3c;
+  --annotation-text: #333333;
+  --annotation-flag-bg: rgba(243, 156, 18, 0.15);
+
+  /* ── Component: Case Flow ── */
+  --caseflow-bg: #ffffff;
+  --caseflow-lane-border: #e5e7eb;
+  --caseflow-lane-label: #666666;
+  --caseflow-edge: #999999;
+  --caseflow-bottleneck: #e74c3c;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 16px 56px rgba(0, 0, 0, 0.25);
+
+  /* ── Backdrop ── */
+  --backdrop-bg: rgba(0, 0, 0, 0.35);
+  --backdrop-blur: blur(4px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK THEME
+   ═══════════════════════════════════════════════════════════════ */
+
+.dark {
+  /* ── App Shell ── */
+  --app-shell-bg: #0f1117;
+  --card-bg: #22262e;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --card-border: #2d3542;
+
+  /* ── Base Colors ── */
+  --bg-primary: #1a1d23;
+  --bg-secondary: #22262e;
+  --bg-tertiary: #282d36;
+  --bg-quaternary: #2c3240;
+
+  /* ── Text Colors ── */
+  --text-primary: #e5e7eb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-dim: #52575e;
+  --text-placeholder: #4b5563;
+
+  /* ── Border Colors ── */
+  --border-primary: #374151;
+  --border-secondary: #2d3542;
+  --border-strong: #404854;
+  --border-heavy: #4a5360;
+  --border-light: #333944;
+
+  /* ── Surface (overlays — slightly adjusted) ── */
+  --surface-overlay: #1f2937;
+  --surface-overlay-header: rgba(0, 0, 0, 0.3);
+  --surface-overlay-card: rgba(255, 255, 255, 0.06);
+  --surface-overlay-border: rgba(255, 255, 255, 0.08);
+  --surface-overlay-input-bg: rgba(255, 255, 255, 0.06);
+  --surface-overlay-input-border: rgba(255, 255, 255, 0.1);
+  --surface-overlay-text: #e5e7eb;
+  --surface-overlay-text-muted: #9ca3af;
+
+  /* ── Header ── */
+  --header-bg: #1a1e28;
+  --header-text: #f9fafb;
+  --header-text-muted: #9ca3af;
+  --header-separator: rgba(255, 255, 255, 0.08);
+  --header-btn-bg: rgba(255, 255, 255, 0.06);
+  --header-btn-border: rgba(255, 255, 255, 0.1);
+  --header-btn-hover: rgba(255, 255, 255, 0.1);
+  --header-btn-text: #d1d5db;
+  --header-badge-bg: rgba(255, 255, 255, 0.08);
+  --header-search-bg: rgba(255, 255, 255, 0.06);
+  --header-search-border: rgba(255, 255, 255, 0.08);
+  --header-search-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.2);
+  --header-search-shadow-focus: 0 4px 16px rgba(96, 165, 250, 0.15), 0 0 0 2px rgba(96, 165, 250, 0.25);
+  --header-group-bg: rgba(255, 255, 255, 0.04);
+  --header-group-border: rgba(255, 255, 255, 0.06);
+  --header-icon-hover: rgba(255, 255, 255, 0.08);
+
+  /* ── Accents (brighter for dark backgrounds) ── */
+  --accent-primary: #60a5fa;
+  --accent-primary-hover: rgba(96, 165, 250, 0.15);
+  --accent-success: #34d399;
+  --accent-success-hover: #2bb380;
+  --accent-danger: #f87171;
+  --accent-danger-hover: #dc2626;
+  --accent-danger-subtle: rgba(248, 113, 113, 0.1);
+  --accent-warning: #fbbf24;
+  --accent-ios-green: #32d74b;
+
+  /* ── Toggle ── */
+  --toggle-off-bg: rgba(255, 255, 255, 0.12);
+  --toggle-on-bg: var(--accent-ios-green);
+  --toggle-knob: #ffffff;
+
+  /* ── Segmented Control ── */
+  --segmented-bg: rgba(255, 255, 255, 0.08);
+  --segmented-text: #9ca3af;
+  --segmented-active-bg: rgba(255, 255, 255, 0.12);
+  --segmented-active-text: #e5e7eb;
+
+  /* ── Status Badges ── */
+  --status-working-bg: rgba(52, 211, 153, 0.15);
+  --status-working-text: #6ee7b7;
+  --status-waiting-bg: rgba(251, 191, 36, 0.15);
+  --status-waiting-text: #fcd34d;
+  --status-idle-bg: rgba(107, 114, 128, 0.15);
+  --status-idle-text: #9ca3af;
+
+  /* ── Component: Lane ── */
+  --lane-bg: #22262e;
+  --lane-bg-alt: #282d36;
+  --lane-label-bg: #22262e;
+  --lane-label-bg-alt: #282d36;
+  --lane-label-border: #374151;
+  --lane-label-text: #d1d5db;
+  --lane-border: #2d3542;
+  --lane-stripe: rgba(255, 255, 255, 0.015);
+
+  /* ── Component: Heatmap Overview ── */
+  --heatmap-row-highlight: rgba(93, 173, 226, 0.2);
+
+  /* ── Component: Track ── */
+  --track-header-bg: #2c3240;
+  --track-header-border: #374151;
+  --track-title-text: #e5e7eb;
+  --track-stats-text: #9ca3af;
+  --track-separator: #4a5360;
+  --track-remove-text: #f87171;
+  --track-remove-hover-bg: rgba(248, 113, 113, 0.1);
+  --track-remove-border: #374151;
+  --track-remove-bg: #2a2f38;
+
+  /* ── Component: Axis ── */
+  --axis-bg: #282d36;
+  --axis-border: #374151;
+  --axis-label-text: #6b7280;
+  --axis-tick-text: #6b7280;
+
+  /* ── Component: Queue ── */
+  --queue-bg: #22262e;
+  --queue-header-bg: #282d36;
+  --queue-border: #374151;
+  --queue-bar-bg: rgba(55, 65, 81, 0.3);
+  --queue-pct-text: #9ca3af;
+  --queue-empty-text: #4b5563;
+  --queue-label-text: #6b7280;
+
+  /* ── Component: Playback ── */
+  --playback-bg: #22262e;
+  --playback-border: #374151;
+  --playback-btn-bg: #2a2f38;
+  --playback-btn-border: #374151;
+  --playback-btn-hover: #333944;
+  --playback-btn-text: #d1d5db;
+  --playback-time-text: #9ca3af;
+  --playback-select-border: #374151;
+
+  /* ── Component: Legend ── */
+  --legend-bg: #22262e;
+  --legend-border: #374151;
+  --legend-item-hover: #2a2f38;
+  --legend-swatch-border: rgba(255, 255, 255, 0.15);
+  --legend-off-text: #4b5563;
+  --legend-sep-text: #6b7280;
+  --legend-assign-text: #9ca3af;
+
+  /* ── Component: Task Block ── */
+  --task-border: rgba(0, 0, 0, 0.3);
+  --task-collab-border: #e5e7eb;
+  --task-shadow-hover: rgba(0, 0, 0, 0.5);
+  --wait-pattern-color: rgba(255, 255, 255, 0.04);
+  --wait-border: rgba(255, 255, 255, 0.08);
+
+  /* ── Component: Playhead ── */
+  --playhead-color: #f87171;
+  --hoverhead-color: rgba(255, 255, 255, 0.2);
+
+  /* ── Component: Annotations ── */
+  --annotation-warning: #fbbf24;
+  --annotation-primary: #60a5fa;
+  --annotation-danger: #f87171;
+  --annotation-text: #e5e7eb;
+  --annotation-flag-bg: rgba(251, 191, 36, 0.15);
+
+  /* ── Component: Case Flow ── */
+  --caseflow-bg: #22262e;
+  --caseflow-lane-border: #374151;
+  --caseflow-lane-label: #9ca3af;
+  --caseflow-edge: #6b7280;
+  --caseflow-bottleneck: #f87171;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 56px rgba(0, 0, 0, 0.7);
+
+  /* ── Backdrop ── */
+  --backdrop-bg: rgba(0, 0, 0, 0.55);
+  --backdrop-blur: blur(6px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Global Enhancements
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Disable transitions for performance-critical elements */
+.task-block,
+.wait-block,
+.assign-marker,
+.annotation-marker,
+.playhead,
+.hoverhead,
+.hoverhead-tip,
+.tooltip {
+  transition: none !important;
+}
+
+/* Re-enable specific task block transitions */
+.task-block {
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease,
+    box-shadow 0.12s ease !important;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--border-heavy);
+}
+
+/* Light mode scrollbar subtle styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+/* ── Annotation inline input (teleported to body) ── */
+.annotation-input-wrap {
+  position: fixed;
+  z-index: 9999;
+  transform: translateX(-50%);
+  pointer-events: auto;
+}
+.annotation-input {
+  width: 220px;
+  min-height: 50px;
+  max-height: 120px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 2px solid var(--accent-primary);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  outline: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  font-family: inherit;
+  resize: none;
+  overflow-y: hidden;
+  line-height: 1.4;
+}
